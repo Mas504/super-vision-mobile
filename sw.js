@@ -1,4 +1,4 @@
-const CACHE = 'super-vision-mobile-v061test';
+const CACHE = 'super-vision-mobile-v062test';
 const FILES = ['./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install', event => {
  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES.map(url=>new Request(url,{cache:'reload'})))).then(()=>self.skipWaiting()));
